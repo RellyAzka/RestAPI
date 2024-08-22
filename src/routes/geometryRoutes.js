@@ -1,10 +1,10 @@
 const express = require("express");
-const router = express.Router();
+const app = express();
 const geometryController = require("../controllers/geometryController");
 
-router.post("/kubus", geometryController.kubus);
-router.post("/balok", geometryController.balok);
-router.post("/tabung", geometryController.tabung);
-router.post("/bola", geometryController.bola);
+app.post("/kubus", geometryController.kubus);
+app.post("/balok", geometryController.balok);
+app.post("/tabung", geometryController.tabung);
+app.post("/bola", geometryController.bola);
 
-module.exports = router;
+module.exports = app;
