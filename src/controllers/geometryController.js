@@ -21,11 +21,9 @@ exports.balok = (req, res) => {
   const { panjang, lebar, tinggi } = req.body;
 
   if (!panjang || !lebar || !tinggi) {
-    return res
-      .status(400)
-      .json({
-        error: "Input tidak valid, harap masukkan panjang, lebar, dan tinggi.",
-      });
+    return res.status(400).json({
+      error: "Input tidak valid, harap masukkan panjang, lebar, dan tinggi.",
+    });
   }
 
   const volume = panjang * lebar * tinggi;
@@ -43,11 +41,9 @@ exports.tabung = (req, res) => {
   const { jariJari, tinggi } = req.body;
 
   if (!jariJari || !tinggi) {
-    return res
-      .status(400)
-      .json({
-        error: "Input tidak valid, harap masukkan jari-jari dan tinggi.",
-      });
+    return res.status(400).json({
+      error: "Input tidak valid, harap masukkan jari-jari dan tinggi.",
+    });
   }
 
   const volume = Math.PI * Math.pow(jariJari, 2) * tinggi;

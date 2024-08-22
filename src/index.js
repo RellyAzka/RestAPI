@@ -21,6 +21,10 @@ app.use(express.json());
 // penggunaan cors agar end point dapat diakses oleh cross platform
 app.use(cors());
 
+const sec = require("./routes/suhuRoutes.js");
+
+app.use("/sec", sec);
+
 // endpoint "/test" dengan method GET
 app.get("/test", (req, res) => {
   // req merupakan variabel yang berisi data request
