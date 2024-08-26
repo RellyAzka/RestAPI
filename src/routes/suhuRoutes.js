@@ -1,8 +1,13 @@
 const express = require("express");
-const app = express();
+const router = express.Router();
 const suhuController = require("../controllers/suhuController");
 
-// End-point untuk Celsius
-app.get("/celcius/:celcius", suhuController.celcius);
+router.get("/celcius/:celcius", suhuController.celcius);
 
-module.exports = app;
+router.get("/fahrenheit/:fahrenheit", suhuController.fahrenheit);
+
+router.get("/reamur/:reamur", suhuController.reamur);
+
+router.get("/kelvin/:kelvin", suhuController.kelvin);
+
+module.exports = router;

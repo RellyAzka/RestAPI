@@ -1,17 +1,13 @@
 const express = require("express");
-const app = express();
-const convertController = require("../controllers/convertController");
+const router = express.Router();
+const ubahController = require("../controllers/ubahController");
 
-// Decimal ke Binary
-app.post("/decimal-to-binary", convertController.decimalToBinary);
+router.post("/decimal-to-binary", ubahController.decimalToBinary);
 
-// Binary ke Octal
-app.post("/binary-to-octal", convertController.binaryToOctal);
+router.post("/binary-to-octal", ubahController.binaryToOctal);
 
-// Octal ke Hexadecimal
-app.post("/octal-to-hexadecimal", convertController.octalToHexadecimal);
+router.post("/octal-to-hexadecimal", ubahController.octalToHexadecimal);
 
-// Hexadecimal ke Decimal
-app.post("/hexadecimal-to-decimal", convertController.hexadecimalToDecimal);
+router.post("/hexadecimal-to-decimal", ubahController.hexadecimalToDecimal);
 
-module.exports = app;
+module.exports = router;

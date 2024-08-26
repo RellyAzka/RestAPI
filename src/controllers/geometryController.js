@@ -1,5 +1,5 @@
 exports.kubus = (req, res) => {
-  const { sisi } = req.body;
+  let sisi = req.body.sisi;
 
   if (!sisi) {
     return res
