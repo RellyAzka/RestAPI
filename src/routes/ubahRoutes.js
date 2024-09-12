@@ -8,6 +8,6 @@ router.post("/binary-to-octal", ubahController.binaryToOctal);
 
 router.post("/octal-to-hexadecimal", ubahController.octalToHexadecimal);
 
-router.post("/hexadecimal-to-decimal", ubahController.hexadecimalToDecimal);
+router.post("/exadecimal-to-dhecimal", ubahController.hexadecimalToDecimal);
 
 module.exports = router;

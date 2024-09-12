@@ -11,17 +11,17 @@ exports.calculateBMI = (req, res) => {
 
   let status = "";
   if (bmi < 18.5) {
-    status = "Kekurangan berat badan";
-  } else if (bmi >= 18.5 && bmi <= 24.9) {
-    status = "Normal (ideal)";
-  } else if (bmi >= 25 && bmi <= 29.9) {
-    status = "Kelebihan berat badan";
+    status = "Underweight";
+  } else if (bmi >= 18.5 && bmi < 25) {
+    status = "Normal weight";
+  } else if (bmi >= 25 && bmi < 30) {
+    status = "Overweight";
   } else {
-    status = "Kegemukan (Obesitas)";
+    status = "Obese";
   }
 
-  return res.json({
-    bmi: bmi.toFixed(2),
-    status,
+  res.json({
+    bmi: bmi,
+    status: status,
   });
 };

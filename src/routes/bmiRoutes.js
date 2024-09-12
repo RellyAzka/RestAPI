@@ -1,7 +1,7 @@
 const express = require("express");
-const app = express();
+const router = express.Router();
 const bmiController = require("../controllers/bmiController");
 
-app.get("/bmi", bmiController.calculateBMI);
+router.get("/bmi", bmiController.calculateBMI);
 
-module.exports = app;
+module.exports = router;

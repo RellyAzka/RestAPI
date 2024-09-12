@@ -4,7 +4,6 @@ exports.decimalToBinary = (req, res) => {
   res.json({ binary });
 };
 
-// Konversi dari biner ke oktal
 exports.binaryToOctal = (req, res) => {
   const { binary } = req.body;
   const decimal = parseInt(binary, 2);
@@ -12,7 +11,6 @@ exports.binaryToOctal = (req, res) => {
   res.json({ octal });
 };
 
-// Konversi dari oktal ke heksadesimal
 exports.octalToHexadecimal = (req, res) => {
   const { octal } = req.body;
   const decimal = parseInt(octal, 8);
@@ -20,7 +18,6 @@ exports.octalToHexadecimal = (req, res) => {
   res.json({ hexadecimal });
 };
 
-// Konversi dari heksadesimal ke desimal
 exports.hexadecimalToDecimal = (req, res) => {
   const { hexadecimal } = req.body;
   const decimal = parseInt(hexadecimal, 16);

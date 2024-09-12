@@ -16,7 +16,6 @@ exports.celcius = (req, res) => {
   return res.json(response);
 };
 
-// Konversi dari Fahrenheit ke Celsius, Reamur, dan Kelvin
 exports.fahrenheit = (req, res) => {
   let fahrenheit = parseFloat(req.params.fahrenheit);
   let celsius = (fahrenheit - 32) * (5 / 9);
@@ -35,7 +34,6 @@ exports.fahrenheit = (req, res) => {
   return res.json(response);
 };
 
-// Konversi dari Reamur ke Celsius, Fahrenheit, dan Kelvin
 exports.reamur = (req, res) => {
   let reamur = parseFloat(req.params.reamur);
   let celsius = reamur / 0.8;
@@ -54,7 +52,6 @@ exports.reamur = (req, res) => {
   return res.json(response);
 };
 
-// Konversi dari Kelvin ke Celsius, Fahrenheit, dan Reamur
 exports.kelvin = (req, res) => {
   let kelvin = parseFloat(req.params.kelvin);
   let celsius = kelvin - 273.15;
